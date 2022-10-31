@@ -21,25 +21,35 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h1 class="h4">Add Task</h1>
+              <h1 class="h4">Salvar Informações </h1>
 
               <form id="task-form">
-                <label for="title">Title:</label>
+                <label for="Nome">Nome:</label>
                 <input
                   type="text"
-                  id="task-title"
+                  id="task-nome"
                   class="form-control mb-3"
-                  class="My First Title"
-                  placeholder="Task Title"
+                  class="My First Nome"
+                  placeholder="Digite seu nome:"
                   autofocus
                 />
+                <form id="task-form">
+                  <label for="Nome">Sobrenome</label>
+                  <input
+                    type="text"
+                    id="task-nome"
+                    class="form-control mb-3"
+                    class="My First Nome"
+                    placeholder="Digite seu sobrenome"
+                    autofocus
+                  />
 
-                <label for="description">Description:</label>
+                <label for="description">Local onde trabalha</label>
                 <textarea
                   id="task-description"
-                  rows="3"
+                  rows="2"
                   class="form-control mb-3"
-                  placeholder="Task Description"
+                  placeholder="Escreva aqui"
                 ></textarea>
 
                 <button class="btn btn-primary" id="btn-task-form">Save</button>
@@ -47,6 +57,7 @@
             </div>
           </div>
         </div>
+        
         <!-- Tasks List -->
         <div class="col-md-6" id="tasks-container"></div>
       </div>
