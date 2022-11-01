@@ -17,13 +17,12 @@ import {
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyANkeMmvZBSqpC0jowezsfkiYjtgNevvxU",
-  authDomain: "fire-clud-aulafelipe.firebaseapp.com",
-  projectId: "fire-clud-aulafelipe",
-  storageBucket: "fire-clud-aulafelipe.appspot.com",
-  messagingSenderId: "253259584812",
-  appId: "1:253259584812:web:9ac84146881821fbd8c889",
-  measurementId: "G-B4KJ0D9JQ6" 
-
+    authDomain: "fire-clud-aulafelipe.firebaseapp.com",
+    projectId: "fire-clud-aulafelipe",
+    storageBucket: "fire-clud-aulafelipe.appspot.com",
+    messagingSenderId: "253259584812",
+    appId: "1:253259584812:web:9ac84146881821fbd8c889",
+    measurementId: "G-B4KJ0D9JQ6"
 };
 
 // Initialize Firebase
@@ -35,10 +34,15 @@ export const db = getFirestore();
  * Save a New Task in Firestore
  * @param {string} nome the title of the Task
  * @param {string} sobrenome the description of the Task
- * @param {int} CPF the description of the Task
+ * @param {int} idade
+ * @param {int} CPF 
+ * @param {string} profissao
+ * @param {string} email
  */
-export const saveTask = (nome, sobrenome, CPF) =>
-  addDoc(collection(db, "tasks"), { nome, sobrenome, CPF });
+export const saveTask = (nome, sobrenome, idade, CPF, profissao,email) =>
+  addDoc(collection(db, "tasks"), { nome, sobrenome, idade, CPF, profissao,email });
+
+  
 
 export const onGetTasks = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
@@ -46,6 +50,7 @@ export const onGetTasks = (callback) =>
 /**
  *
  * @param {string} id Task ID
+ *
  */
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 
