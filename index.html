@@ -21,43 +21,41 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h1 class="h4">Salvar Informações </h1>
+              <h1 class="h4">Adicionando dados pessoais</h1>
 
-              <form id="task-form">
-                <label for="Nome">Nome:</label>
+              <form id="dados">
+                <label for="title">Nome:</label>
                 <input
                   type="text"
-                  id="task-nome"
+                  id="nome"
                   class="form-control mb-3"
-                  class="My First Nome"
-                  placeholder="Digite seu nome:"
+                  class="My First Title"
+                  placeholder="Digite seu nome"
                   autofocus
                 />
-                <form id="task-form">
-                  <label for="Nome">Sobrenome</label>
-                  <input
-                    type="text"
-                    id="task-nome"
-                    class="form-control mb-3"
-                    class="My First Nome"
-                    placeholder="Digite seu sobrenome"
-                    autofocus
-                  />
 
-                <label for="description">Local onde trabalha</label>
-                <textarea
-                  id="task-description"
-                  rows="2"
+                <label for="sobrenome">Sobrenome:</label>
+                <input
+                  type="text"
+                  id="sobrenome"
                   class="form-control mb-3"
-                  placeholder="Escreva aqui"
-                ></textarea>
+                  placeholder="Digite seu sobrenome"
+                ></input>
+                  <label for="sobrenome">CPF:</label>
+                  <input
+                  type="text"
+                  id="CPF"
+                  class="form-control mb-3"
+                  placeholder="Informe seu CPF"
+                  ></input>
+                
+              
 
                 <button class="btn btn-primary" id="btn-task-form">Save</button>
               </form>
             </div>
           </div>
         </div>
-        
         <!-- Tasks List -->
         <div class="col-md-6" id="tasks-container"></div>
       </div>

@@ -23,6 +23,7 @@ const firebaseConfig = {
   messagingSenderId: "253259584812",
   appId: "1:253259584812:web:9ac84146881821fbd8c889",
   measurementId: "G-B4KJ0D9JQ6" 
+
 };
 
 // Initialize Firebase
@@ -32,11 +33,12 @@ export const db = getFirestore();
 
 /**
  * Save a New Task in Firestore
- * @param {string} title the title of the Task
- * @param {string} description the description of the Task
+ * @param {string} nome the title of the Task
+ * @param {string} sobrenome the description of the Task
+ * @param {int} CPF the description of the Task
  */
-export const saveTask = (title, description) =>
-  addDoc(collection(db, "tasks"), { title, description });
+export const saveTask = (nome, sobrenome, CPF) =>
+  addDoc(collection(db, "tasks"), { nome, sobrenome, CPF });
 
 export const onGetTasks = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
