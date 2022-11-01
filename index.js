@@ -27,9 +27,14 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
       tasksContainer.innerHTML += `
       <div class="card card-body mt-2 border-primary">
-    <h3 class="h5">${task.nome}</h3>
-    <p>${task.sobrenome}</p>
+    <h3 class="h5">Cadastro</h3>
+    <p>${task.nome}</p>
+    <p>${task.sobrenome}</p> 
+    <p>${task.idade}</p>
     <p>${task.CPF}</p>
+    <p>${task.profissao}</p>
+    <p>${task.email}</p>
+    
     <div>
       <button class="btn btn-primary btn-delete" data-id="${doc.id}">
         🗑 Delete
@@ -60,7 +65,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           const task = doc.data();
           taskForm["nome"].value = task.nome;
           taskForm["sobrenome"].value = task.sobrenome;
+          taskForm["idade"].value = task.idade;
           taskForm["CPF"].value = task.CPF;
+          taskForm["profissao"].value = task.profissao;
+          taskForm["email"].value = task.email;
 
           editStatus = true;
           id = doc.id;
@@ -78,16 +86,24 @@ taskForm.addEventListener("submit", async (e) => {
 
   const nome = taskForm["nome"];
   const sobrenome = taskForm["sobrenome"];
+  const idade = taskForm["idade"];
   const CPF = taskForm["CPF"];
+  const profissao  = taskForm["profissao"];
+  const email  = taskForm["email"];
+  
 
-  try {
+
+    try {
     if (!editStatus) {
-      await saveTask(nome.value, sobrenome.value, CPF.value);
+      await saveTask(nome.value, sobrenome.value, idade.value, CPF.value, profissao.value, email.value);
     } else {
       await updateTask(id, {
         nome: nome.value, 
         sobrenome: sobrenome.value,
+        idade: idade.value,
         CPF: CPF.value,
+        profissao: profissao.value,
+        email: email.value,
       });
 
       editStatus = false;
