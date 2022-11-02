@@ -1,90 +1,60 @@
-
-
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase CRUD</title>
 
     <!-- BOOTSWATCH -->
-    <link
-      rel="stylesheet"
-      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css" />
+</head>
 
-  <body class="bg-dark">
+<body class="bg-dark">
     <!-- ADD TASK -->
     <div class="container p-4">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="h4">Adicionando dados pessoais</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="h4">Adicionando dados pessoais</h1>
 
-              <form id="dados">
-                <label for="title">Nome:</label>
-                <input
-                  type="text"
-                  id="nome"
-                  class="form-control mb-3"
-                  class="My First Title"
-                  placeholder="Digite seu nome"
-                  autofocus
-                />
+                        <form id="dados">
+                            <label for="title">Nome:</label>
+                            <input type="text" id="nome" class="form-control mb-3" class="My First Title" placeholder="Digite seu nome" autofocus />
 
-                <label for="sobrenome">Sobrenome:</label>
-                <input
-                  type="text"
-                  id="sobrenome"
-                  class="form-control mb-3"
-                  placeholder="Digite seu sobrenome"
-                ></input>
+                            <label for="sobrenome">Sobrenome:</label>
+                            <input type="text" id="sobrenome" class="form-control mb-3" placeholder="Digite seu sobrenome"></input>
 
-                <label for="idade">Idade:</label>
-                  <input
-                  type="number"
-                  id="idade"
-                  class="form-control mb-3"
-                  placeholder="Informe sua idade"
-                  ></input>
+                            <label for="idade">Idade:</label>
+                            <input type="number" id="idade" class="form-control mb-3" placeholder="Informe sua idade"></input>
 
-                <label for="CPF">CPF:</label>
-                  <input
-                  type="number"
-                  id="CPF"
-                  class="form-control mb-3"
-                  placeholder="Informe seu CPF"
-                  ></input>
+                            <label for="CPF">CPF:</label>
+                            <input type="number" id="CPF" class="form-control mb-3" placeholder="Informe seu CPF"></input>
 
-                  <label for="profissao">Profissão:</label>
-                  <input
-                  type="text"
-                  id="profissao"
-                  class="form-control mb-3"
-                  placeholder="Informe sua profissao"
-                  ></input>
-                  <label for="email">Email:</label>
-                  <input
-                  type="email"
-                  id="email"
-                  class="form-control mb-3"
-                  placeholder="Informe seu email"
-                  ></input>
-              
+                            <label for="profissao">Profissão:</label>
+                            <input type="text" id="profissao" class="form-control mb-3" placeholder="Informe sua profissao"></input>
 
-                <button class="btn btn-primary" id="btn-task-form">Save</button>
-              </form>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" class="form-control mb-3" placeholder="Informe seu email"></input>
+
+                            <label for="Estado">Relacionamento:</label>
+                            <input type="text" id="teste" class="form-control mb-3" placeholder="Casado(a) ou solteiro(a)?"></input>
+
+
+                            <button class="btn btn-primary" id="btn-task-form">Save</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
+            <!-- Tasks List -->
+            <div class="col-md-6" id="tasks-container"></div>
         </div>
-        <!-- Tasks List -->
-        <div class="col-md-6" id="tasks-container"></div>
-      </div>
     </div>
 
     <!-- CUSTOM CODE -->
     <script src="./index.js" type="module"></script>
-  </body>
+</body>
+
 </html>

@@ -3,20 +3,20 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import {
-  getFirestore,
-  collection,
-  getDocs,
-  onSnapshot,
-  addDoc,
-  deleteDoc,
-  doc,
-  getDoc,
-  updateDoc,
+    getFirestore,
+    collection,
+    getDocs,
+    onSnapshot,
+    addDoc,
+    deleteDoc,
+    doc,
+    getDoc,
+    updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyANkeMmvZBSqpC0jowezsfkiYjtgNevvxU",
+    apiKey: "AIzaSyANkeMmvZBSqpC0jowezsfkiYjtgNevvxU",
     authDomain: "fire-clud-aulafelipe.firebaseapp.com",
     projectId: "fire-clud-aulafelipe",
     storageBucket: "fire-clud-aulafelipe.appspot.com",
@@ -38,14 +38,15 @@ export const db = getFirestore();
  * @param {int} CPF 
  * @param {string} profissao
  * @param {string} email
+ * @param {string} teste  
  */
-export const saveTask = (nome, sobrenome, idade, CPF, profissao,email) =>
-  addDoc(collection(db, "tasks"), { nome, sobrenome, idade, CPF, profissao,email });
+export const saveTask = (nome, sobrenome, idade, CPF, profissao, email, teste) =>
+    addDoc(collection(db, "tasks"), { nome, sobrenome, idade, CPF, profissao, email, teste });
 
-  
+
 
 export const onGetTasks = (callback) =>
-  onSnapshot(collection(db, "tasks"), callback);
+    onSnapshot(collection(db, "tasks"), callback);
 
 /**
  *
@@ -57,6 +58,6 @@ export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 export const getTask = (id) => getDoc(doc(db, "tasks", id));
 
 export const updateTask = (id, newFields) =>
-  updateDoc(doc(db, "tasks", id), newFields);
+    updateDoc(doc(db, "tasks", id), newFields);
 
 export const getTasks = () => getDocs(collection(db, "tasks"));
