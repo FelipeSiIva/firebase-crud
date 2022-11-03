@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", async(e) => {
     <p>CPF: ${task.CPF}</p>
     <p>Profissão: ${task.profissao}</p>
     <p>Email: ${task.email}</p>
-    <p>Estado: ${task.teste}</p>
+    <p>UF: ${task.teste}</p>
     
     
     <div>
