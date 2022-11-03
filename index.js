@@ -28,13 +28,13 @@ window.addEventListener("DOMContentLoaded", async(e) => {
             tasksContainer.innerHTML += `
       <div class="card card-body mt-2 border-primary">
     <h3 class="h5">Cadastro</h3>
-    <p>${task.nome}</p>
-    <p>${task.sobrenome}</p> 
-    <p>${task.idade}</p>
-    <p>${task.CPF}</p>
-    <p>${task.profissao}</p>
-    <p>${task.email}</p>
-    <p>${task.teste}</p>
+    <p>Nome: ${task.nome}</p>
+    <p>Sobrenome: ${task.sobrenome}</p> 
+    <p>Idade: ${task.idade}</p>
+    <p>CPF: ${task.CPF}</p>
+    <p>Profissão: ${task.profissao}</p>
+    <p>Email: ${task.email}</p>
+    <p>Estado: ${task.teste}</p>
     
     
     <div>
